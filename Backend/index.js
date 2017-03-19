@@ -18,10 +18,10 @@ function addtckt(tcktid) {
     if (!err) {
         jsonfile.readFile(file, function(err, obj) {
             if (Object.keys(obj).length === 0)
-                tickets = tickets + JSON.stringify(rows);
+                tickets.push(JSON.parse(JSON.stringify(rows[0])));
             else {
                 tickets.push(obj);
-                tickets = tickets + JSON.stringify(rows);
+                tickets.push(JSON.parse(JSON.stringify(rows[0])));
             }
             console.log(tickets);
       });
