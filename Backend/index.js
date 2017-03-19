@@ -20,10 +20,15 @@ function addtckt(tcktid) {
             if (Object.keys(obj).length === 0)
                 tickets.push(JSON.parse(JSON.stringify(rows[0])));
             else {
-                tickets.push(obj);
+                for (var key in obj)
+                    tickets.push(obj[key]);
                 tickets.push(JSON.parse(JSON.stringify(rows[0])));
             }
-            console.log(tickets);
+            //console.log(tickets);
+            jsonfile.writeFile(file, tickets, function (err) {
+                if(err)
+                    console.error(err);
+            });
       });
     }
     else
