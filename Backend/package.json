@@ -1,0 +1,11 @@
+{
+  "name": "cooli",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.15.2",
+    "fs": "0.0.1-security",
+    "jsonfile": "^2.4.0",
+    "mysql": "^2.5.4",
+    "node-mysql": "^0.4.2"
+  }
+}
