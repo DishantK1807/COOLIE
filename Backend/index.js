@@ -36,6 +36,22 @@ function addtckt(tcktid) {
     });
 }
 
+
+function rmtckt(tcktid){
+    tickets = []
+    jsonfile.readFile(file, function(err, obj) {
+            for (var key in obj)
+                if(obj[key]["ticketid"] != tcktid)
+                    tickets.push(obj[key]);
+        //console.log(tickets);
+        jsonfile.writeFile(file, tickets, function (err) {
+            if(err)
+                console.error(err);
+        });
+  });
+}
+
+
 function getloc(tcktid) {
     var sql = mysql.format("SELECT track.ticketid, track.rfid, checkpoints.location\
                             FROM track INNER JOIN checkpoints ON \
@@ -49,6 +65,4 @@ function getloc(tcktid) {
     });
 }
 
-
-addtckt(1);
 connection.end();
