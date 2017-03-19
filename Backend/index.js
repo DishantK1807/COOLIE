@@ -28,6 +28,7 @@ function addtckt(tcktid) {
             jsonfile.writeFile(file, tickets, function (err) {
                 if(err)
                     console.error(err);
+                    tickets = [];       // Flush Array
             });
       });
     }
@@ -47,6 +48,7 @@ function rmtckt(tcktid){
         jsonfile.writeFile(file, tickets, function (err) {
             if(err)
                 console.error(err);
+                tickets = [];        // Flush Array
         });
   });
 }
