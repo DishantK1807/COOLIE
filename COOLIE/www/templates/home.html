@@ -1,0 +1,14 @@
+<ion-view title="Home" id="page1">
+  <ion-content padding="true" class="has-header" ng-controller="BarScanController">
+    <div id="home-container1">
+      <div class="spacer" style="height: 70px;"></div>
+      <a ui-sref="cOOLIE.ticketInfo" id="home-button2" style="font-weight:500;" class="button button-positive  button-block" ng-click="scanBarcode()">Scan Ticket!</a>
+    </div>
+    <div class="spacer" style="height: 70px;"></div>
+    <div id="home-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
+      <p style="color:#4848EB;font-size:50px;">OR</p>
+    </div>
+    <div class="spacer" style="height: 70px;"></div>
+    <a ui-sref="cOOLIE.enterTicketID" id="home-button3" style="font-weight:500;" class="button button-positive  button-block">Enter Ticket ID!</a>
+  </ion-content>
+</ion-view>
