@@ -1,15 +1,15 @@
 <ion-view title="Enter Ticket ID" id="page5">
-  <ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header" ng-controller="popupcontrol">
     <div id="enterTicketID-container3">
       <form id="enterTicketID-form2" class="list">
         <div class="spacer" style="height: 70px;"></div>
         <label class="item item-input" id="enterTicketID-input1">
           <span class="input-label">Ticket ID</span>
-          <input type="text" placeholder="">
+          <input type="text" placeholder="" ng-model="ticketid">
         </label>
       </form>
     </div>
     <div class="spacer" style="height: 30px;"></div>
-    <a ui-sref="cOOLIE.ticketInfo" id="enterTicketID-button4" class="button button-balanced  button-block">Submit</a>
+    <a ui-sref="cOOLIE.ticketInfo" id="enterTicketID-button4" class="button button-balanced  button-block" ng-click="pop()">Submit</a>
   </ion-content>
 </ion-view>

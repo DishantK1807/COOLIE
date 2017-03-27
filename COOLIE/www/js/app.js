@@ -96,3 +96,9 @@ main.controller("BarScanController", function($scope, $cordovaBarcodeScanner) {
     };
 
 });
+
+main.controller("popupcontrol", function($scope){
+    $scope.pop = function(){
+        alert($scope.ticketid);
+    };
+});
