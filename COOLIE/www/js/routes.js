@@ -86,6 +86,36 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('cOOLIE.bags', {
+    url: '/page12',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/bags.html',
+        controller: 'bagsCtrl'
+      }
+    }
+  })
+
+  .state('cOOLIE.checkpoints', {
+    url: '/page13',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/checkpoints.html',
+        controller: 'checkpointsCtrl'
+      }
+    }
+  })
+
+  .state('cOOLIE.feedback', {
+    url: '/feedback',
+    views: {
+      'side-menu21': {
+        templateUrl: 'templates/feedback.html',
+        controller: 'feedbackCtrl'
+      }
+    }
+  })
+
 $urlRouterProvider.otherwise('/side-menu21/page1')
 
   
