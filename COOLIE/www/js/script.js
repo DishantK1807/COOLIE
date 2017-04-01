@@ -1,5 +1,8 @@
-function addtckt(tcktid){
-	alert(tcktid);
+function addtckt(pnr){
+    var ticket = firebase.database().ref('passenger');
+    ticket.on('value', function(snapshot) {
+      alert(JSON.stringify(snapshot.val()));
+    });
 }
 
 main.controller("BarScanController", function($scope, $cordovaBarcodeScanner) {
