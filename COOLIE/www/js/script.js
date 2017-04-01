@@ -1,7 +1,10 @@
 function addtckt(pnr){
-    var ticket = firebase.database().ref('passenger');
-    ticket.on('value', function(snapshot) {
-      alert(JSON.stringify(snapshot.val()));
+    var db = firebase.database().ref('passenger').orderByChild("pnr").equalTo(pnr);
+    db.on('value', function(snapshot) {
+      let ticket = JSON.stringify(snapshot.val());
+      alert(ticket);
+      ticket.off();
+      $window.location.href = 'page12';
     });
 }
 

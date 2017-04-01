@@ -1,8 +1,8 @@
 <ion-view title="Home" id="page1">
-  <ion-content padding="true" class="has-header" ng-controller="BarScanController">
+  <ion-content padding="true" class="has-header"  ng-controller="BarScanController">
     <div id="home-container1">
       <div class="spacer" style="width: 300px; height: 72px;"></div>
-      <button id="home-button2" style="font-weight:600;" class="button button-energized button-large button-block" ng-click="scanBarcode()"> Scan Ticket</button>
+      <a ui-sref="cOOLIE.ticketInfo" id="home-button2" style="font-weight:600;" class="button button-energized button-large button-block" ng-click="scanBarcode()"> Scan Ticket</a>
     </div>
     <div class="spacer" style="height: 60px;"></div>
     <div id="home-markdown1" style="text-align:center;" class="show-list-numbers-and-dots">
