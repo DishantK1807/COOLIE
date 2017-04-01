@@ -1,10 +1,12 @@
 function addtckt(pnr){
-    var db = firebase.database().ref('passenger').orderByChild("pnr").equalTo(pnr);
+    var db = firebase.database().ref("passenger").orderByChild("pnr").equalTo(pnr);
     db.on('value', function(snapshot) {
-      let ticket = JSON.stringify(snapshot.val());
-      alert(ticket);
-      ticket.off();
-      $window.location.href = 'page12';
+        let ticket = JSON.stringify(snapshot.val()[pnr]);
+        //alert(ticket);
+        //localStorage.setItem("temptickets",ticket);
+        alert(localStorage.getItem(temptickets));
+
+    db.off();
     });
 }
 
@@ -26,5 +28,12 @@ main.controller("ticket", function($scope){
     $scope.enterid = function(){
         //alert($scope.ticketid);
 		addtckt($scope.ticketid);
+    };
+});
+
+
+main.controller("locatbags",function($scope){
+    $scope.checkpt = function(){
+        firebase.database().ref("checkpoint").orderByChild("rfid").equalTo($scope.rfid);
     };
 });
